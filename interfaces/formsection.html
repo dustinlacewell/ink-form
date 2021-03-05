@@ -1,0 +1,256 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FormSection | ink-form</title>
+	<meta name="description" content="Documentation for ink-form">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">ink-form</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">ink-form</a>
+				</li>
+				<li>
+					<a href="formsection.html">FormSection</a>
+				</li>
+			</ul>
+			<h1>Interface FormSection</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A form is composed of several sections of which only one can be shown at once. It is
+							composed of several form fields. The title is shown as tab-text for the section.
+						A description can be supplied which will be shown at the top of the form.</p>
+					</div>
+					<p>Note that all form fields are stored in a global value object, regardless of section structure.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">FormSection</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="formsection.html#description" class="tsd-kind-icon">description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="formsection.html#fields" class="tsd-kind-icon">fields</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="formsection.html#title" class="tsd-kind-icon">title</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="description" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> description</h3>
+					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <a href="../modules.html#description" class="tsd-signature-type" data-tsd-kind="Type alias">Description</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lukasbach/ink-form/blob/9a88fdc/src/types.ts#L68">types.ts:68</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Optional text that describes this section.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="fields" class="tsd-anchor"></a>
+					<h3>fields</h3>
+					<div class="tsd-signature tsd-kind-icon">fields<span class="tsd-signature-symbol">:</span> <a href="../modules.html#formfield" class="tsd-signature-type" data-tsd-kind="Type alias">FormField</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lukasbach/ink-form/blob/9a88fdc/src/types.ts#L66">types.ts:66</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of form fields which are visible when this section is open.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="title" class="tsd-anchor"></a>
+					<h3>title</h3>
+					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/lukasbach/ink-form/blob/9a88fdc/src/types.ts#L64">types.ts:64</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Title of the section, will be shown as its tab name.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="formfieldmanager.html" class="tsd-kind-icon">Form<wbr>Field<wbr>Manager</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="formfieldvaluerendererprops.html" class="tsd-kind-icon">Form<wbr>Field<wbr>Value<wbr>Renderer<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="formprops.html" class="tsd-kind-icon">Form<wbr>Props</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
+						<a href="formsection.html" class="tsd-kind-icon">Form<wbr>Section</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="formsection.html#description" class="tsd-kind-icon">description</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="formsection.html#fields" class="tsd-kind-icon">fields</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="formsection.html#title" class="tsd-kind-icon">title</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-interface">
+						<a href="formstructure.html" class="tsd-kind-icon">Form<wbr>Structure</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../modules.html#abstractformfield" class="tsd-kind-icon">Abstract<wbr>Form<wbr>Field</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#description" class="tsd-kind-icon">Description</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#formfield" class="tsd-kind-icon">Form<wbr>Field</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#formfieldboolean" class="tsd-kind-icon">Form<wbr>Field<wbr>Boolean</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#formfieldfloat" class="tsd-kind-icon">Form<wbr>Field<wbr>Float</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#formfieldinteger" class="tsd-kind-icon">Form<wbr>Field<wbr>Integer</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#formfieldmultiselect" class="tsd-kind-icon">Form<wbr>Field<wbr>Multi<wbr>Select</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../modules.html#formfieldrendererprops" class="tsd-kind-icon">Form<wbr>Field<wbr>Renderer<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#formfieldselect" class="tsd-kind-icon">Form<wbr>Field<wbr>Select</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../modules.html#formfieldstring" class="tsd-kind-icon">Form<wbr>Field<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../modules.html#specificformfieldrendererprops" class="tsd-kind-icon">Specific<wbr>Form<wbr>Field<wbr>Renderer<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../modules.html#typeoffield" class="tsd-kind-icon">Type<wbr>OfField</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../modules.html#valueoffield" class="tsd-kind-icon">Value<wbr>OfField</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../modules.html#form" class="tsd-kind-icon">Form</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../modules.html#openform" class="tsd-kind-icon">open<wbr>Form</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

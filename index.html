@@ -1,0 +1,250 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ink-form</title>
+	<meta name="description" content="Documentation for ink-form">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">ink-form</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>ink-form</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#ink-form" id="ink-form" style="color: inherit; text-decoration: none;">
+					<h1>ink-form</h1>
+				</a>
+				<p><code>ink-form</code> is a Node library for displaying a user-friendly form in a terminal window.
+					It can be used in two ways, either by using the React Ink component <code>Form</code> exported by
+				the package, or by using the imperative API <code>openForm(options)</code>.</p>
+				<p><img src="https://github.com/lukasbach/ink-form/raw/main/demo/overview.gif" alt="alt text" title="Demo 1">
+				<img src="https://github.com/lukasbach/ink-form/raw/main/demo/packagejson.gif" alt="alt text" title="Demo 2"></p>
+				<a href="#example-usage" id="example-usage" style="color: inherit; text-decoration: none;">
+					<h2>Example usage</h2>
+				</a>
+				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> </span><span style="color: #001080">ink</span><span style="color: #000000">-</span><span style="color: #001080">form</span>
+</code></pre>
+				<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">options</span><span style="color: #000000"> = [</span>
+<span style="color: #000000">  { </span><span style="color: #001080">label:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Opt 1&#039;</span><span style="color: #000000">, </span><span style="color: #001080">value:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;a&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">label:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Opt 2&#039;</span><span style="color: #000000">, </span><span style="color: #001080">value:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;b&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">];</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">form</span><span style="color: #000000">: </span><span style="color: #267F99">FormProps</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">  </span><span style="color: #001080">form:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Form title&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">sections:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">      {</span>
+<span style="color: #000000">        </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Text and Number fields&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">fields:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">          { </span><span style="color: #001080">type:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000">, </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;field1&#039;</span><span style="color: #000000">, </span><span style="color: #001080">label:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Input with initial value&#039;</span><span style="color: #000000">, </span><span style="color: #001080">initialValue:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Initial value&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">          { </span><span style="color: #001080">type:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;string&#039;</span><span style="color: #000000">, </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;field2&#039;</span><span style="color: #000000">, </span><span style="color: #001080">label:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Masked input&#039;</span><span style="color: #000000">, </span><span style="color: #001080">mask:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;*&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">          { </span><span style="color: #001080">type:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;integer&#039;</span><span style="color: #000000">, </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;field3&#039;</span><span style="color: #000000">, </span><span style="color: #001080">label:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Integer between -5 and 8, stepsize 2&#039;</span><span style="color: #000000">, </span><span style="color: #001080">min:</span><span style="color: #000000"> -</span><span style="color: #098658">5</span><span style="color: #000000">, </span><span style="color: #001080">max:</span><span style="color: #000000"> </span><span style="color: #098658">8</span><span style="color: #000000">, </span><span style="color: #001080">step:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000"> },</span>
+<span style="color: #000000">          { </span><span style="color: #001080">type:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;float&#039;</span><span style="color: #000000">, </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;field4&#039;</span><span style="color: #000000">, </span><span style="color: #001080">label:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Float between 0 and 5, stepsize 0.1&#039;</span><span style="color: #000000">, </span><span style="color: #001080">min:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #001080">max:</span><span style="color: #000000"> </span><span style="color: #098658">5</span><span style="color: #000000">, </span><span style="color: #001080">step:</span><span style="color: #000000"> </span><span style="color: #098658">0.1</span><span style="color: #000000"> },</span>
+<span style="color: #000000">        ],</span>
+<span style="color: #000000">      },</span>
+<span style="color: #000000">      {</span>
+<span style="color: #000000">        </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Select and boolean fields&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">fields:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">          { </span><span style="color: #001080">type:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;select&#039;</span><span style="color: #000000">, </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;field5&#039;</span><span style="color: #000000">, </span><span style="color: #001080">label:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Select&#039;</span><span style="color: #000000">, </span><span style="color: #001080">options</span><span style="color: #000000"> },</span>
+<span style="color: #000000">          { </span><span style="color: #001080">type:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;multiselect&#039;</span><span style="color: #000000">, </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;field6&#039;</span><span style="color: #000000">, </span><span style="color: #001080">label:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Multi Select&#039;</span><span style="color: #000000">, </span><span style="color: #001080">options</span><span style="color: #000000"> },</span>
+<span style="color: #000000">          { </span><span style="color: #001080">type:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;boolean&#039;</span><span style="color: #000000">, </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;field7&#039;</span><span style="color: #000000">, </span><span style="color: #001080">label:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Boolean select&#039;</span><span style="color: #000000">, </span><span style="color: #001080">options</span><span style="color: #000000"> },</span>
+<span style="color: #000000">        ],</span>
+<span style="color: #000000">      },</span>
+<span style="color: #000000">    ],</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">};</span>
+
+<span style="color: #008000">// either:</span>
+<span style="color: #000000">(</span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">openForm</span><span style="color: #000000">(</span><span style="color: #001080">form</span><span style="color: #000000">);</span>
+<span style="color: #000000">  </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">`Finished with value`</span><span style="color: #000000">, </span><span style="color: #001080">result</span><span style="color: #000000">);</span>
+<span style="color: #000000">})();</span>
+
+<span style="color: #008000">// or:</span>
+<span style="color: #795E26">render</span><span style="color: #000000">(</span>
+<span style="color: #000000">  &lt;</span><span style="color: #001080">Form</span>
+<span style="color: #000000">    </span><span style="color: #001080">form</span><span style="color: #000000">={</span><span style="color: #001080">form</span><span style="color: #000000">} </span>
+<span style="color: #000000">    </span><span style="color: #001080">onSubmit</span><span style="color: #000000">={</span><span style="color: #001080">result</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #A31515">`Finished with value`</span><span style="color: #000000">, </span><span style="color: #001080">result</span><span style="color: #000000">);</span>
+<span style="color: #000000">    }} </span>
+<span style="color: #000000">  /&gt;</span>
+<span style="color: #000000">);</span>
+</code></pre>
+				<p>If you want to see how using <code>ink-form</code> feels, you can clone this repo, run <code>yarn</code> to install
+				dependencies and then run one of the demo scripts:</p>
+				<ul>
+					<li><code>yarn demo:overview</code> (<a href="https://github.com/lukasbach/ink-form/blob/main/src/demo/overview.tsx">See Code</a>)</li>
+					<li><code>yarn demo:packagejson</code> (<a href="https://github.com/lukasbach/ink-form/blob/main/src/demo/packagejson.tsx">See Code</a>)</li>
+					<li><code>yarn demo:custommanager</code> (<a href="https://github.com/lukasbach/ink-form/blob/main/src/demo/custommanager.tsx">See Code</a>)</li>
+					<li><code>yarn demo:imperative</code> (<a href="https://github.com/lukasbach/ink-form/blob/main/src/demo/imperative.ts">See Code</a>)</li>
+				</ul>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h2>Documentation</h2>
+				</a>
+				<p>Detailed documentation is available at <a href="https://lukasbach.github.io/ink-form/">lukasbach.github.io/ink-form</a>.
+				Install the package with <code>npm install ink-form --save</code> or <code>yarn add ink-form</code> to your project.</p>
+				<p>Then, render the form by invoking the <a href="https://lukasbach.github.io/ink-form/modules.html#openform">imperative interface</a>
+					or by rendering the <a href="https://lukasbach.github.io/ink-form/modules.html#form">React Ink component</a>.
+				Both take <a href="https://lukasbach.github.io/ink-form/interfaces/formprops.html"><code>FormProps</code></a> as parameters.</p>
+				<p>The most important property is the <code>form</code>-property, which dictates how the form fields are structured. It follows
+					the <a href="https://lukasbach.github.io/ink-form/interfaces/formstructure.html"><code>FormStructure</code></a>-interface. Look into the
+				example above to see an example.</p>
+				<a href="#custom-fields" id="custom-fields" style="color: inherit; text-decoration: none;">
+					<h2>Custom fields</h2>
+				</a>
+				<p>A form field describes a type of input, i.e. text input, number input etc.
+				Included are:</p>
+				<ul>
+					<li>FormFieldString</li>
+					<li>FormFieldInteger</li>
+					<li>FormFieldFloat</li>
+					<li>FormFieldSelect</li>
+					<li>FormFieldMultiSelect</li>
+					<li>FormFieldBoolean</li>
+				</ul>
+				<p>You can add your own form field by extending
+					<a href="https://lukasbach.github.io/ink-form/modules.html#abstractformfield"><code>AbstractFormField</code></a>
+					and implementing an associated
+				<a href="https://lukasbach.github.io/ink-form/interfaces/formfieldmanager.html"><code>FormFieldManager&lt;CustomFormField&gt;</code></a>.</p>
+				<p><img src="https://github.com/lukasbach/ink-form/raw/main/demo/customfield.gif" alt="alt text" title="Demo 3"></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/formfieldmanager.html" class="tsd-kind-icon">Form<wbr>Field<wbr>Manager</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/formfieldvaluerendererprops.html" class="tsd-kind-icon">Form<wbr>Field<wbr>Value<wbr>Renderer<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/formprops.html" class="tsd-kind-icon">Form<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/formsection.html" class="tsd-kind-icon">Form<wbr>Section</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/formstructure.html" class="tsd-kind-icon">Form<wbr>Structure</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="modules.html#abstractformfield" class="tsd-kind-icon">Abstract<wbr>Form<wbr>Field</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#description" class="tsd-kind-icon">Description</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#formfield" class="tsd-kind-icon">Form<wbr>Field</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#formfieldboolean" class="tsd-kind-icon">Form<wbr>Field<wbr>Boolean</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#formfieldfloat" class="tsd-kind-icon">Form<wbr>Field<wbr>Float</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#formfieldinteger" class="tsd-kind-icon">Form<wbr>Field<wbr>Integer</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#formfieldmultiselect" class="tsd-kind-icon">Form<wbr>Field<wbr>Multi<wbr>Select</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="modules.html#formfieldrendererprops" class="tsd-kind-icon">Form<wbr>Field<wbr>Renderer<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#formfieldselect" class="tsd-kind-icon">Form<wbr>Field<wbr>Select</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#formfieldstring" class="tsd-kind-icon">Form<wbr>Field<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="modules.html#specificformfieldrendererprops" class="tsd-kind-icon">Specific<wbr>Form<wbr>Field<wbr>Renderer<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="modules.html#typeoffield" class="tsd-kind-icon">Type<wbr>OfField</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="modules.html#valueoffield" class="tsd-kind-icon">Value<wbr>OfField</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#form" class="tsd-kind-icon">Form</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#openform" class="tsd-kind-icon">open<wbr>Form</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
