@@ -28,6 +28,7 @@ export class StringFormFieldManager implements FormFieldManager<FormFieldString>
         placeholder={props.field.placeholder}
         onSubmit={() => props.onSetEditingField(undefined)}
         mask={props.field.mask}
+        focus
       />
     </Box>
   );

@@ -20,11 +20,11 @@ export const Form: React.FC<FormProps> = props => {
     focusManager.enableFocus();
   }, []);
 
-  useEffect(() => {
-    if (props.value) {
-      setValue(props.value);
-    }
-  }, [props.value]);
+//   useEffect(() => {
+//     if (props.value) {
+//       setValue(props.value);
+//     }
+//   }, [props.value]);
 
   useEffect(() => {
     // Set initial values
